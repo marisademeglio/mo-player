@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Media Overlays Playback using TextTrackCues and CSS Custom Highlight API</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family:Arial, Helvetica, sans-serif;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            iframe {
+                width: 98%;
+                height: 90vh;
+                overflow-y: scroll;
+                padding: 10px;
+                border: none;
+            }
+            button {
+                border-radius: 10px;
+                padding: 5px;
+                background: none;
+            }
+            /* the highlight styles are in highlights.css */
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Media Overlays Playback using TextTrackCues and CSS Custom Highlight API</h1>
+            <p>Press the button to load the demo. The files used are XHTML and SMIL, straight from an EPUB.</p>
+            <button>Load demo</button>
+        </header>
+        
+        <main>
+            <iframe title="Chapter content"></iframe>
+        </main>
+        
+        <script type="module">
+            import * as mo from './mo-player.js';
+            
+            // the demo content urls
+            const xhtml = new URL('./demo-content/chapter_001.xhtml', window.location.href).href;
+            const smil = new URL('./demo-content/chapter_001_overlay.smil', window.location.href).href;
+            
+            document.querySelector('button').addEventListener('click', e => { 
+                mo.load(xhtml, smil);
+            });
+        </script>
+    </body>
+</html>
