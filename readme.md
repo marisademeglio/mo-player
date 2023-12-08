@@ -10,6 +10,7 @@ Easily play EPUB 3 Media overlays by first converting them to TextTrackCues and 
 * Nesting: SMIL file has some nested sequences
 
 **To try it**:  
+See the [live demo](https://marisademeglio.github.io/mo-player), best viewed in Chrome for its [CSS Custom Highlight API](https://caniuse.com/mdn-api_highlight_has) support.  
 Open index.html and load the demo. A chapter file will load inside the page. There will also be an audio element with which to start playback. You should be able to see the text highlighting in the chapter file follow the audio playback.
 
 **About**:  
