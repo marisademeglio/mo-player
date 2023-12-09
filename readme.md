@@ -15,7 +15,7 @@ See the [live demo](https://marisademeglio.github.io/mo-player), best viewed in 
 This is a proof of concept project to explore using the latest browser-based media APIs for supporting playback of EPUB 3 Media Overlays playback, which can be challenging for reading systems.
 
 **Advantages**:  
-* No parsing SMIL files or writing media playback engines
+* Don't have to write a SMIL engine or deal with media timing
 * CSS Custom Highlight API provides text highlighting in a way that is not intrusive to the DOM (no adding classnames)
 
 **Disadvantages**:  
